@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   HashRouter as Router,
   Switch,
@@ -19,32 +18,31 @@ const Main = styled.div`
   overflow: auto;
 `;
 
-
 function App() {
   return (
-  <Router>
-    <Wrapper>
-      <Main>
-        <Switch>
-          <Route path="/tags">
-            <Tags/>
-          </Route>
-          <Route path="/money">
-            <Money/>
-          </Route>
-          <Route path="/statistics">
-            <Statistics/>
-          </Route>
-          <Redirect exact from="/" to="/money"/>
-          <Route path="*">
-            <NoMatch/>
-          </Route>
-        </Switch>
-      </Main>
-      <Nav/>
-    </Wrapper>
-  </Router>
-);
+    <Router>
+      <Wrapper>
+        <Main>
+          <Switch>
+            <Route path="/tags">
+              <Tags/>
+            </Route>
+            <Route path="/money">
+              <Money/>
+            </Route>
+            <Route path="/statistics">
+              <Statistics/>
+            </Route>
+            <Redirect exact from="/" to="/money"/>
+            <Route path="*">
+              <NoMatch/>
+            </Route>
+          </Switch>
+        </Main>
+        <Nav/>
+      </Wrapper>
+    </Router>
+  );
 }
 
 function NoMatch() {
