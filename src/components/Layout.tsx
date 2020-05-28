@@ -24,4 +24,5 @@ const Layout = (props: any) => {
   );
 };
 
-export default Layout;
+export {Layout};
+
