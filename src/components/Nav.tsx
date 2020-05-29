@@ -40,22 +40,26 @@ const Nav = () => {
       <ul>
         <li>
           <NavLink to="/tags" activeClassName="selected">
-            <Icon name="tag"/>标签页
+            <Icon name="tag"/>
+            标签页
           </NavLink>
         </li>
         <li>
           <NavLink to="/money" activeClassName="selected">
-            <Icon name="money"/>记账页
+            <Icon name="money"/>
+            记账页
           </NavLink>
         </li>
         <li>
           <NavLink to="/statistics" activeClassName="selected">
-            <Icon name="chart"/>统计页
+            <Icon name="chart"/>
+            统计页
           </NavLink>
         </li>
       </ul>
     </NavWrapper>
   );
 };
+
 
 export default Nav;

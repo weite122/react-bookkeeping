@@ -1365,10 +1365,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/classnames@^2.2.10":
-  version "2.2.10"
-  resolved "https://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.10.tgz#cc658ca319b6355399efc1f5b9e818f1a24bf999"
-  integrity sha1-zGWMoxm2NVOZ78H1uegY8aJL+Zk=
+"@types/classnames@2.2.6":
+  version "2.2.6"
+  resolved "https://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.6.tgz?cache=0&sync_timestamp=1588200199390&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fclassnames%2Fdownload%2F%40types%2Fclassnames-2.2.6.tgz#dbe8a666156d556ed018e15a4c65f08937c3f628"
+  integrity sha1-2+imZhVtVW7QGOFaTGXwiTfD9ig=
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
