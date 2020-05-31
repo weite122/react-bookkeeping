@@ -5,10 +5,12 @@ export const useUpdate = (fn: () => void, deps: any[]) => {
   useEffect(() => {
     count.current += 1;
   });
+  console.log(1)
   useEffect(() => {
     if (count.current > 1) {
       fn();
     }
   }, deps); // 不可变数据
+  console.log(2)
 };
 
