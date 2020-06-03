@@ -37,7 +37,7 @@ function Statistics() {
   const hash: { [K: string]: RecordItem[] } = {}; // {'2020-05-11': [item, item], '2020-05-10': [item, item], '2020-05-12': [item, item, item, item]}
   const selectedRecords = records.filter(r => r.category === category);
 
-  selectedRecords.map(r => {
+  selectedRecords.forEach(r => {
     const key = day(r.createdAt).format('YYYY年MM月DD日');
     if (!(key in hash)) {
       hash[key] = [];
@@ -59,13 +59,13 @@ function Statistics() {
         </CategorySection>
       </CategoryWrapper>
 
-      {array.map(([date, records]) => <div>
+      {array.map(([date, records]) => <div key={date}>
         <Header>
           {date}
         </Header>
         <div>
           {records.map(r => {
-            return <Item>
+            return <Item key={r.tagIds.toString()}>
               <div className="tags oneLine">
                 {r.tagIds
                   .map(tagId => <span key={tagId}>{getName(tagId)}</span>)
