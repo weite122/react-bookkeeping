@@ -79,7 +79,7 @@ function Statistics() {
             return <Item key={r.tagIds[0]}>
               <div className="tags oneLine">
                 {r.tagIds
-                  .map(tagId =>  <span key={tagId}><Icon name={getIconName(tagId)}/>{getName(tagId)}</span>)
+                  .map(tagId => <span key={tagId}><Icon name={getIconName(tagId)}/>{getName(tagId)}</span>)
                   .reduce((result, span, index, array) =>
                     result.concat(index < array.length - 1 ? [span, '，'] : [span]), [] as ReactNode[])
                 }
