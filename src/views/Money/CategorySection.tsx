@@ -10,7 +10,10 @@ const Wrapper = styled.section`
       text-align:center;
       padding: 16px 0;
       position: relative;
-      color: #1890ff;
+      color: black;
+      &.selected{
+        color: #1890ff;
+      }
       &.selected::after{
         content: '';
         display:block; 

@@ -12,7 +12,6 @@ const TagList = styled.ol`
   font-size: 16px; 
   background:white;
   > li{
-    //#e5e5e7
     border-bottom: 1px solid #d5d5d9;
     line-height: 20px;
     margin-left: 16px;
@@ -21,6 +20,15 @@ const TagList = styled.ol`
       display:flex;
       justify-content: space-between;
       align-items: center;
+      span{
+        margin-left: 0px;
+        margin-right: auto;
+      }
+      .tagIcon{
+        border-radius: 50%;
+        background: #d9d9d9;
+        margin-right: 5px;
+      }
     }
   }
 `;
@@ -34,6 +42,7 @@ function Tags() {
         {tags.map(tag =>
           <li key={tag.id}>
             <Link to={'/tags/' + tag.id}>
+              <Icon className="tagIcon" name={tag.iconName}/>
               <span className="oneLine">{tag.name}</span>
               <Icon name="right"/>
             </Link>

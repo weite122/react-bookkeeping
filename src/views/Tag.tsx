@@ -31,12 +31,12 @@ const Tag: React.FC = () => {
   const {findTag, updateTag, deleteTag} = useTags();
   let {id: idString} = useParams<Params>();
   const tag = findTag(parseInt(idString));
-  const tagContent = (tag: { id: number; name: string }) => (
+  const tagContent = (tag: { id: number; name: string; iconName: string }) => (
     <div>
       <InputWrapper>
         <Input label="标签名" type="text" placeholder="标签名" value={tag.name}
                onChange={(e) => {
-                 updateTag(tag.id, {name: e.target.value});
+                 updateTag(tag.id, {name: e.target.value}, {iconName: 'othercome'});
                }}/>
       </InputWrapper>
       <Center>

@@ -5,6 +5,7 @@ import {RecordItem, useRecords} from '../hooks/useRecords';
 import {useTags} from '../hooks/useTags';
 import day from 'dayjs';
 import {Layout} from '../components/Layout';
+import {Icon} from '../components/Icon';
 
 const CategoryWrapper = styled.div`
   background:white;
@@ -23,6 +24,16 @@ const Item = styled.div`
   font-size: 18px;
   line-height: 20px;
   padding: 10px 16px;
+  > .tags{
+    span {
+    display: inline-flex;
+    align-items: center;
+    svg {
+     margin-right: 5px;
+      }
+    }
+  }
+
   > .note{
     margin-right: auto;
     margin-left: 16px;
@@ -33,7 +44,7 @@ const Item = styled.div`
 function Statistics() {
   const [category, setCategory] = useState<'-' | '+'>('-');
   const {records} = useRecords();
-  const {getName} = useTags();
+  const {getName, getIconName} = useTags();
   const hash: { [K: string]: RecordItem[] } = {}; // {'2020-05-11': [item, item], '2020-05-10': [item, item], '2020-05-12': [item, item, item, item]}
   const selectedRecords = records.filter(r => r.category === category);
 
@@ -68,7 +79,7 @@ function Statistics() {
             return <Item key={r.tagIds[0]}>
               <div className="tags oneLine">
                 {r.tagIds
-                  .map(tagId => <span key={tagId}>{getName(tagId)}</span>)
+                  .map(tagId =>  <span key={tagId}><Icon name={getIconName(tagId)}/>{getName(tagId)}</span>)
                   .reduce((result, span, index, array) =>
                     result.concat(index < array.length - 1 ? [span, '，'] : [span]), [] as ReactNode[])
                 }
