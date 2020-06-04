@@ -65,7 +65,7 @@ function Statistics() {
         </Header>
         <div>
           {records.map(r => {
-            return <Item key={r.tagIds.toString()}>
+            return <Item key={r.tagIds[0]}>
               <div className="tags oneLine">
                 {r.tagIds
                   .map(tagId => <span key={tagId}>{getName(tagId)}</span>)
