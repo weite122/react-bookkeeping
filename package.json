@@ -1,6 +1,7 @@
 {
   "name": "react-bookkeeping",
   "version": "0.1.0",
+  "homepage": "https://weite122.github.io/react-bookkeeping-website/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
