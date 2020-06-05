@@ -12,13 +12,14 @@ const Wrapper = styled.section`
     margin: 0 -12px;
     > li {
        background: #D9D9D9; border-radius: 18px;
-       display:inline-flex; padding: 3px 18px; 
+       display:inline-flex; padding: 3px 15px; 
        font-size: 14px; margin: 8px 12px;
        align-items:center;
        &.selected{
         background: #666;
         color: #fff;
        }
+       svg{margin-right: 5px;}
     }
   }
   > button{
